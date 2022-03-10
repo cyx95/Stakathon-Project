@@ -3,12 +3,17 @@
 const db = require('./db')
 
 const User = require('./models/User')
+const Trail = require('./models/Trail')
+const Park = require('./models/Park')
 
-//associations could go here!
+Park.hasMany(Trail);
+Trail.belongsTo(Park);
 
 module.exports = {
   db,
   models: {
     User,
+    Trail,
+    Park
   },
 }
