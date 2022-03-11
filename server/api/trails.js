@@ -4,9 +4,7 @@ module.exports = router;
 
 router.get("/", async (req, res, next) => {
   try {
-    const trails = await Trail.findAll({
-      include: [Park, Review]
-    });
+    const trails = await Trail.findAll();
     res.send(trails)
   } catch (err) {
     next(err);

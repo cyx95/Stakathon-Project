@@ -4,7 +4,9 @@ module.exports = router;
 
 router.get('/', async(req, res, next) => {
     try {
-        const parks = await Park.findAll()
+        const parks = await Park.findAll({
+            include: Trail
+        })
         res.send(parks)
     } catch (err) {
         next (err)

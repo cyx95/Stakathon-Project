@@ -10,20 +10,20 @@ class AllTrails extends React.Component {
     const trails = this.props.allTrails;
     return (
       <div className="all-trails">
-        {trails.map((trail) => {
+        {trails.map((trail) => (
           <div key={trail.id} className="each-trail">
             <div>
               <div>
                 {trail.name}
                 <ul>{trail.description}</ul>
-                <ul>{trail.difficulty}</ul>
-                <ul>{trail.miles}</ul>
-                <ul>{trail.elevation}</ul>
-                <ul>{trail.routeType}</ul>
+                <ul>Difficulty: {trail.difficulty}</ul>
+                <ul>Miles: {trail.miles}</ul>
+                <ul>Elevation: {trail.elevation}</ul>
+                <ul>RouteType: {trail.routeType}</ul>
               </div>
             </div>
-          </div>;
-        })}
+          </div>
+        ))}
       </div>
     );
   }

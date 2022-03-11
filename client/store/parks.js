@@ -12,8 +12,8 @@ const getParks = (parks) => {
 export const fetchParks = () => {
   return async (dispatch) => {
     try {
-      const { data: parks } = await axios.get("/api/parks");
-      dispatch(getParks(parks));
+      const { data } = await axios.get("/api/parks");
+      dispatch(getParks(data));
     } catch (err) {
       console.log(err);
     }

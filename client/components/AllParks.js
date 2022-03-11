@@ -1,36 +1,39 @@
-import React from 'react'
-import {connect} from 'react-redux'
-import { fetchParks } from '../store/parks'
+import React from "react";
+import { connect } from "react-redux";
+import { fetchParks } from "../store/parks";
+import{ Link } from 'react-router-dom';
 
 class AllParks extends React.Component {
+  componentDidMount() {
+    this.props.getParks();
+  }
+  render() {
+    const parks = this.props.allParks;
 
-    componentDidMount () {
-        this.props.getParks()
-    }
-    render () {
-        const parks = this.props.allParks;
-        return (
-            <div className='all-parks'>
-                {parks.map((park) => {
-                    <div key={park.id} className='each-park'>
-                        <div>{park.name}</div>
-                    </div>
-                })}
+    return (
+      <div>
+        <div className='all-parks'>
+          {parks.map((park) => (
+            <div key={park.id} className='each-park'>
+              <div>{park.name}</div>
             </div>
-        )
-    }
+          ))}
+        </div>
+      </div>
+    );
+  }
 }
 
 const mapState = (state) => {
-    return {
-        allParks: state.parks
-    }
-}
+  return {
+    allParks: state.parks,
+  };
+};
 
 const mapDispatch = (dispatch) => {
-    return {
-        getParks: () => dispatch(fetchParks())
-    }
-}
+  return {
+    getParks: () => dispatch(fetchParks()),
+  };
+};
 
-export default connect(mapState, mapDispatch)(AllParks)
+export default connect(mapState, mapDispatch)(AllParks);

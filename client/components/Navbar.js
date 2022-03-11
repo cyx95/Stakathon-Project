@@ -5,7 +5,7 @@ import {logout} from '../store'
 
 const Navbar = ({handleClick, isLoggedIn}) => (
   <div>
-    <h1>Hiking Trail Randomizer</h1>
+    <h1>New York Hikes</h1>
     <nav>
       <div>
         <Link to='/parks'>All Parks</Link>
