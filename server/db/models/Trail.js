@@ -1,27 +1,26 @@
-const Sequelize = require('sequelize')
-const db = require('../db')
+const Sequelize = require("sequelize");
+const db = require("../db");
 
-const Trail = db.define('trail', {
+const Trail = db.define("trail", {
   name: {
     type: Sequelize.STRING,
-    allowNull: false
+    allowNull: false,
   },
   description: {
-    type: Sequelize.TEXT
+    type: Sequelize.TEXT,
   },
   difficulty: {
-    type: Sequelize.ENUM("Easy", "Moderate", "Hard")
-    
+    type: Sequelize.ENUM("Easy", "Moderate", "Hard"),
   },
   miles: {
     type: Sequelize.DECIMAL,
   },
   elevation: {
-    type: Sequelize.INTEGER
+    type: Sequelize.INTEGER,
   },
   routeType: {
-    type: Sequelize.ENUM("Loop", "Out and back")
-  }
-})
+    type: Sequelize.ENUM("Loop", "Out and back"),
+  },
+});
 
 module.exports = Trail;

@@ -2,7 +2,7 @@
 
 const {
   db,
-  models: { User, Trail, Park },
+  models: { User, Trail, Park, Review },
 } = require("../server/db");
 
 /**
@@ -286,6 +286,21 @@ const parkData = [
   },
 ];
 
+const reviewData = [
+  {
+    review: "Great hike. Bring spikes. It is slippery."
+  },
+  {
+    review: "Very pretty views up top and a cool descent down steps through boulders. We managed without spikes, but there were a few tricky spots going up. Would definitely recommend counterclockwise with the snow/ice"
+  },
+  {
+    review: "Very nice trail but a few paved road crossings and highway noise at times. Still a little icy but Great view at top!"
+  },
+  {
+    review: "Around freezing temperatures five or take. Little icey. Windy across the bridge and on the top as expected."
+  }
+]
+
 async function seed() {
   await db.sync({ force: true }); // clears db and matches models to tables
   console.log("db synced!");
@@ -307,6 +322,31 @@ async function seed() {
       return Park.create(park);
     })
   );
+
+  const reviews = await Promise.all(
+    reviewData.map((review) => {
+      return Review.create(review)
+    })
+  )
+
+  await users[0].setReviews([
+    reviews[0],
+    reviews[1]
+  ])
+  await users[1].setReviews([
+    reviews[2],
+    reviews[3]
+  ])
+
+  await trails[0].setReviews([
+    reviews[0],
+    reviews[1]
+  ])
+  await trails[1].setReviews([
+    reviews[2],
+    reviews[3]
+  ])
+
 
   await parks[0].setTrails([
     trails[0],

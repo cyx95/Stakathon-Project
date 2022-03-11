@@ -7,6 +7,10 @@ const Navbar = ({handleClick, isLoggedIn}) => (
   <div>
     <h1>Hiking Trail Randomizer</h1>
     <nav>
+      <div>
+        <Link to='/parks'>All Parks</Link>
+      </div>
+      
       {isLoggedIn ? (
         <div>
           {/* The navbar will show these links after you log in */}
