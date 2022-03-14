@@ -277,12 +277,18 @@ const trailData = [
 const parkData = [
   {
     name: "Bear Mountain State Park",
+    description:"Bear Mountain State Park is situated in rugged mountains rising from the west bank of the Hudson River. The park features a large play field, shaded picnic groves, lake and river fishing access, a swimming pool, Trailside Museums and Zoo, hiking, biking and cross-country ski trails. An outdoor rink is open to ice skaters from late October through mid-March. The Perkins Memorial Tower atop Bear Mountain affords spectacular views of the park, the Hudson Highlands and Harriman State Park. Perkins Memorial Drive and Tower are open from April through late November, weather permitting.",
+    imageUrl: "https://assets.simpleviewinc.com/simpleview/image/fetch/q_75/https://assets.simpleviewinc.com/simpleview/image/upload/crm/newyorkstate/HV_0807_01871-e3da1141fbcdc45_e3da1344-ec37-0fda-db2031c686f968a4.jpg"
   },
   {
     name: "Minnewaska State Park",
+    description:"The Minnewaska State Park Preserve is a 22,275-acre (90.14 km2)[1] preserve located on the Shawangunk Ridge in Ulster County, New York on US 44/NY 55, five miles (8.0 km) west of New York State Route 299. The park, which features scenic overlooks of the nearby Catskill Mountains, is primarily used for picnicking, hiking, mountain biking, snowshoeing and swimming. The park is managed by the Palisades Interstate Park Commission and the New York State Office of Parks, Recreation and Historic Preservation. Four of the five sky lakes on the Shawangunk Ridge lie within the preserve: Lake Minnewaska, Lake Awosting, Mud Pond (also known as Lake Haseco), and Lake Maratanza; Mohonk Lake is on the property of the Mohonk Mountain House to the north of Minnewaska. Lake Minnewaska is a bit less than one-half mile (0.8 km) long by one-eighth mile (0.2 km) wide at its widest point. Lake Awosting is roughly three times as large, with a length of about one and an eighth miles (1.8 km) and a maximum width of about one-quarter mile (0.4 km) mile.",
+    imageUrl:"https://www.nynjtc.org/sites/default/files/styles/hike_park_destination_page/public/park/8_Minnewaska1_Wagstaff2012.jpg?itok=J0iiUtoP"
   },
   {
     name: "Hudson Highlands State Park Preserve",
+    description:"Hudson Highlands State Park is a non-contiguous state park in the U.S. state of New York, located on the east side of the Hudson River. The park runs from Peekskill in Westchester County, through Putnam County, to Beacon in Dutchess County, in the eastern section of the Hudson Highlands. The park's lands, heavily mined, logged and quarried in the past, were assembled over the mid-20th century from different purchases by the state, totaling 7,669 acres (31.04 km2; 11.98 sq mi) as of 2014.[2] They range from riverside salt marshes to mountain summits, including the highest in the Highlands, the 1,610-foot (490 m) south summit of Beacon Mountain.[3] It is managed by the New York State Office of Parks, Recreation and Historic Preservation (NYSOPRHP) from offices at Fahnestock State Park to the east. Its parcels adjoin others owned by other public agencies and private preserves, some of which are managed by NYSOPRHP as well and are open to the public. Due to its panoramic views of the river and mountains, and easy access by both automobile and rail, it has become a very popular destination for day hikes. The park's best known trail makes a steep, rocky ascent up Breakneck Ridge. Other trails climb neighboring Bull Hill and follow the cliffs of Anthony's Nose. The Appalachian Trail (AT) also goes through the southeast corner of the park.",
+    imageUrl: "https://i.redd.it/t75icud0u8331.jpg"
   },
 ];
 

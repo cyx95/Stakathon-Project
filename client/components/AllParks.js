@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { fetchParks } from "../store/parks";
-import{ Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 class AllParks extends React.Component {
   componentDidMount() {
@@ -12,12 +12,16 @@ class AllParks extends React.Component {
 
     return (
       <div>
-        <div className='all-parks'>
+        <h1>State Parks</h1>
+        <div className="all-parks">
           {parks.map((park) => (
-            <div key={park.id} className='each-park'>
-              <div>{park.name}</div>
+            <div key={park.id} className="each-park">
+              <Link to={`/parks/${park.id}`}>
+                <div>{park.name}</div>
+              </Link>
             </div>
           ))}
+          <img className='all-park-images'src='https://wildlandtrekking.com/content/uploads/2020/03/7495706918_8804d85ae2_h-1200x901.jpg'/>
         </div>
       </div>
     );

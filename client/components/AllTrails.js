@@ -13,14 +13,12 @@ class AllTrails extends React.Component {
         {trails.map((trail) => (
           <div key={trail.id} className="each-trail">
             <div>
-              <div>
-                {trail.name}
-                <ul>{trail.description}</ul>
-                <ul>Difficulty: {trail.difficulty}</ul>
-                <ul>Miles: {trail.miles}</ul>
-                <ul>Elevation: {trail.elevation}</ul>
-                <ul>RouteType: {trail.routeType}</ul>
-              </div>
+              {trail.name}
+              <ul>{trail.description}</ul>
+              <ul>Difficulty: {trail.difficulty}</ul>
+              <ul>Miles: {trail.miles}</ul>
+              <ul>Elevation: {trail.elevation}</ul>
+              <ul>RouteType: {trail.routeType}</ul>
             </div>
           </div>
         ))}

@@ -5,6 +5,11 @@ import { Login, Signup } from "./components/AuthForm";
 import Home from "./components/Home";
 import AllTrails from "./components/AllTrails";
 import AllParks from "./components/AllParks";
+import MainPage from "./components/MainPage";
+import BearTrails from "./components/BearTrails";
+import MinnewaskaTrails from "./components/MinnewaskaTrails";
+import HudsonTrails from "./components/HudsonTrails";
+import SinglePark from "./components/SinglePark";
 import { me } from "./store";
 
 /**
@@ -21,9 +26,13 @@ class Routes extends Component {
     return (
       <div>
         <Switch>
-          <Route exact path="/" component={Login} />
+          <Route exact path="/" component={MainPage} />
           <Route exact path="/trails" component={AllTrails} />
           <Route exact path="/parks" component={AllParks} />
+          <Route exact path="/parks/:parkId" component={SinglePark} />
+          <Route exact path="/beartrails" component={BearTrails} />
+          <Route exact path="/minnewaskatrails" component={MinnewaskaTrails} />
+          <Route exact path="/hudsontrails" component={HudsonTrails} />
         </Switch>
         {isLoggedIn ? (
           <Switch>
